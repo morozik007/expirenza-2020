@@ -1,0 +1,12 @@
+<% var data = {
+  title: "Expirenza",
+}; %>
+
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+<div class="container">
+  Первая страница.
+  <img src="/images/logo.svg" alt="">
+</div>
+
+<%= _.template(require('./../includes/footer.html'))(data) %>
