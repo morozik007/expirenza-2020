@@ -4,9 +4,101 @@
 
 <%= _.template(require('./../includes/header.html'))(data) %>
 
-<div class="container">
-  Первая страница.
-  <img src="/images/logo.svg" alt="">
-</div>
+<section class="why">
+  <div class="container">
+    <h3>Почему Expirenza?</h3>
+
+    <div class="why__content">
+      <div class="why__item">
+        <figure>
+          <img src="/images/why-qr.svg" width="72" height="128" alt="">
+        </figure>
+        Не нужно устанавливать приложение, только<br> считать QR-код
+      </div>
+      <div class="why__item">
+        <figure>
+          <img src="/images/why-bubble.svg" width="180" height="103" alt="">
+        </figure>
+        Мгновенная связь клиент-руководитель
+      </div>
+      <div class="why__item">
+        <figure>
+          <img src="/images/why-24.svg" width="132" height="134" alt="">
+        </figure>
+        Запуск в работу уже сегодня
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="analytics">
+  <h3>Expirenza аналитика</h3>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore explicabo asperiores, praesentium culpa minima esse libero suscipit nulla perferendis cupiditate optio, aspernatur quis alias beatae dignissimos quam reprehenderit quia adipisci.
+</section>
+
+<section class="price">
+  <h3>Тарифы</h3>
+  <div class="price__content">
+    <div class="price__item">
+      <div class="price__name">Фермер</div>
+      <div class="price__cost">
+          <span>1500</span> <small>грн / месяц<br>локация</small>
+      </div>
+      <div class="price__benefits">
+        Unlimited SMS <br>
+        Text & photo<br>
+        Analytics<br>
+        Telegram bot<br>
+        Gifts Coupon system
+      </div>
+      <a href="" class="price__try">Попробовать</a>
+    </div>
+
+    <div class="price__item">
+      <div class="price__name">Охотник</div>
+      <div class="price__cost">
+          <span>2500</span> <small>грн / месяц<br>локация</small>
+      </div>
+      <div class="price__benefits">
+        Unlimited SMS<br>
+        Text & photo<br>
+        Video & audio<br>
+        Analytics<br>
+        Telegram bot<br>
+        Gifts Coupon system<br>
+        Personal operator<br>
+        Sms рассылка
+      </div>
+      <a href="" class="price__try">Попробовать</a>
+    </div>
+  </div>
+</section>
+
+<section class="clients">
+  <h3>Удерживают клиентов с нами</h3>
+  <div class="container">
+    <div class="clients__list">
+      <div class="client">
+        <img src="/images/medokom-logo.svg" width="86" height="28" alt="">
+      </div>
+      <div class="client">
+        <img src="/images/iqos-logo.svg" width="106" height="28" alt="">
+      </div>
+      <div class="client">
+        <img src="/images/vdnh-logo.svg" width="40" height="72" alt="">
+      </div>
+      <div class="client">
+        <img src="/images/citrus-logo.svg" width="110" height="28" alt="">
+      </div>
+      <div class="client">
+        <img src="/images/m-logo.svg" width="32" height="32" alt="">
+      </div>
+      <div class="client">
+        <img src="/images/kurazh-logo.svg" width="77" height="40" alt="">
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <%= _.template(require('./../includes/footer.html'))(data) %>
