@@ -10,7 +10,7 @@
       <div class="hero__text">
         <h3>Узнай о проблемах раньше чем Facebook</h3>
         <p>Expirenza — cовременный сервис обратной связи для бизнеса</p>
-        <a href="" class="hero__try">Попробовать</a>
+        <a class="hero__try" href="javascript:;" data-fancybox data-src="#try-free">Попробовать</a>
       </div>
       <div class="hero__animation">
         <%= _.template(require('./../includes/lottie.html'))(data) %>
@@ -19,7 +19,7 @@
   </div>
 </section>
 
-<section class="oppo">
+<section class="oppo" id="opportunities">
   <div class="container">
     <div class="oppo__title">Возможности</div>
 
@@ -117,7 +117,7 @@
   </div>
 </section>
 
-<section class="why">
+<section class="why" id="why">
   <div class="container">
     <h3>Почему Expirenza?</h3>
 
@@ -154,7 +154,7 @@
   </div>
 </section>
 
-<section class="price">
+<section class="price" id="price">
   <h3>Тарифы</h3>
   <div class="price__content">
     <div class="price__item">
@@ -169,7 +169,7 @@
         Telegram bot<br>
         Gifts Coupon system
       </div>
-      <a href="" class="price__try">Попробовать</a>
+      <a href="javascript:;" data-fancybox data-src="#try-free" class="price__try">Попробовать</a>
     </div>
 
     <div class="price__item">
@@ -187,12 +187,12 @@
         Personal operator<br>
         Sms рассылка
       </div>
-      <a href="" class="price__try">Попробовать</a>
+      <a href="javascript:;" data-fancybox data-src="#try-free" class="price__try">Попробовать</a>
     </div>
   </div>
 </section>
 
-<section class="clients">
+<section class="clients" id="clients">
   <h3>Удерживают клиентов с нами</h3>
   <div class="container">
     <div class="clients__list">
@@ -219,7 +219,7 @@
   </div>
 </section>
 
-<section class="video">
+<section class="video" id="feedback">
   <div class="container">
     <div class="video__wrapper">
       <iframe width="100%" height="" src="https://www.youtube.com/embed/1-HJ-zHiWKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -243,5 +243,9 @@
     </div>
   </div>
 </section>
+
+<div class="popup-form" style="display: none;" id="try-free">
+  тут будет форма Оформить пробный период
+</div>
 
 <%= _.template(require('./../includes/footer.html'))(data) %>

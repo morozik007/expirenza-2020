@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=cyrillic');
 @import "~slick-carousel/slick/slick.css";
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
 
 //@import "~bootstrap/scss/bootstrap";
 
@@ -249,7 +250,7 @@ body {
 }
 
 .price {
-  padding: 110px 0;
+  padding: 110px 0 30px;
 
   h3 {
     font-size: 32px;
@@ -335,6 +336,8 @@ body {
 }
 
 .clients {
+  padding-top: 80px;
+
   h3 {
     font-size: 32px;
     font-weight: 500;
@@ -346,7 +349,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0 50px;
+    padding: 40px 0 0px;
   }
 }
 
@@ -408,6 +411,7 @@ body {
 
 .video {
   position: relative;
+  padding-top: 60px;
 
   &:after {
     content: "";
@@ -588,4 +592,8 @@ body {
   &__slide-text {
     max-width: 540px;
   }
+}
+
+.popup-form {
+  border-radius: 5px;
 }
