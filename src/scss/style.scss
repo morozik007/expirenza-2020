@@ -4,6 +4,12 @@
 
 //@import "~bootstrap/scss/bootstrap";
 
+@mixin mobile {
+    @media only screen and (max-width: 1023px) {
+        @content;
+    }
+}
+
 $red: #f93e56;
 $blue: #3b4256;
 
@@ -28,6 +34,11 @@ body {
   max-width: 1110px;
   margin: 0 auto;
   //border: solid 1px red;
+
+  @include mobile {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .header {
@@ -44,12 +55,16 @@ body {
   top: 0;
   z-index: 100;
 
+  @include mobile {
+    position: relative;
+  }
+
   .logo {
     display: inline-block;
     width: 147px;
     height: 24px;
     transform: translateY(-3px);
-    background: url(/images/logo.svg) no-repeat center center;
+    background: url(../images/logo.svg) no-repeat center center;
   }
 
   .navigation {
@@ -76,11 +91,19 @@ body {
 .footer {
   background: $blue;
   color: #fff;
-  padding: 80px 20px;  
+  padding: 80px 20px;
+
+  @include mobile {
+    padding: 55px 0;
+  }  
 
   &__intro {
     text-align: center;
     font-size: 14px;
+
+    @include mobile {
+      display: none;
+    }
 
     h4 {
       font-size: 21px;
@@ -93,10 +116,21 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 25px 0 0;
+
+    @include mobile {
+      flex-direction: column;
+      padding: 0;
+    }
   }
 
   &__visit {
     width: 25%;
+
+    @include mobile {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 20px;
+    }
 
     a {
       display: inline-block;
@@ -110,16 +144,20 @@ body {
       text-indent: -99999px;
       margin-right: 20px;
 
+      @include mobile {
+        margin: 0 10px;
+      }
+
       &:hover {
         background-color: lighten(#2e3343, 2%);
       }
 
       &.visit-facebook {
-        background-image: url(/images/facebook.svg);
+        background-image: url(../images/facebook.svg);
         background-size: 28px 28px;
       }
       &.visit-instagram {
-        background-image: url(/images/instagram.svg);
+        background-image: url(../images/instagram.svg);
         background-size: 32px 32px;
       }
     }
@@ -129,17 +167,26 @@ body {
     width: 288px;
     height: 288px;
     background-color: #383f52;
-    background-image: url(/images/qr.svg);
+    background-image: url(../images/qr.svg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 152px 152px;
     border-radius: 100%;
     text-align: center;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__mail {
     width: 25%;
     text-align: right;
+
+    @include mobile {
+      width: 100%;
+      text-align: center;
+    }
 
     a {
       color: #fff;
@@ -161,6 +208,10 @@ body {
   padding: 100px 0;
   text-align: center;
 
+  @include mobile {
+    padding:  60px 0 30px;
+  }
+
   .container {
     padding-left: 60px;
     padding-right: 60px;
@@ -170,17 +221,30 @@ body {
     font-size: 32px;
     margin: 0 0 80px;
     font-weight: 500;
+
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 50px;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__item {
     max-width: 240px;
     font-weight: 500;
+
+    @include mobile {
+      margin: 0 auto 50px;
+    }
 
     figure {
       display: flex;
@@ -205,64 +269,129 @@ body {
   font-weight: 500;
   padding: 80px 0;
 
+  @include mobile {
+    overflow: hidden;
+    padding: 60px 0;
+  }
+
   h3 {
     font-size: 32px;
     font-weight: 500;
     margin: 0 0 60px;
     text-align: center;
+
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
   }
 
   &__box {
     display: block;
     margin: auto;
-    background: url(/images/analitika.svg) no-repeat center center;
+    background: url(../images/analitika.svg) no-repeat center center;
     width: 463px;
     height: 326px;
     position: relative;
+
+    @include mobile {
+      //border: solid 1px red;
+      width: 100%;
+      height: 650px;
+
+      background-image:
+        url(../images/analitika.svg),
+        url(../images/analitika.svg);
+      
+      background-position:
+        top 0px left -345px,
+        bottom 0px right -315px;
+  
+      background-size: 463px 326px;
+      background-repeat: no-repeat;
+    }
 
     span {
       position: absolute;
       left: 50%;
       top: 0;
       white-space: nowrap;
+
+      @include mobile {
+        left: auto;
+        top: auto;
+      }
     }
   }
 
   &__text-1 { 
     margin-left: -385px;
     margin-top: 224px;
+
+    @include mobile {
+      margin: 0;
+      left: auto;
+      top: auto;
+      right: 158px;
+      bottom: 78px;
+    }
   }
 
   &__text-2 { 
     margin-left: 239px;
     margin-top: 76px;
+
+    @include mobile {
+      margin-left: 130px;
+    }
   }
 
   &__text-3 { 
     margin-left: 239px;
     margin-top: 147px;
+
+    @include mobile {
+      margin-left: 130px;
+    }
   }
 
   &__text-4 { 
     margin-left: 239px;
     margin-top: 219px;
+
+    @include mobile {
+      margin-left: 130px;
+    }
   }
 }
 
 .price {
   padding: 110px 0 30px;
 
+  @include mobile {
+    padding: 60px 24px 0;
+  }
+
   h3 {
     font-size: 32px;
     font-weight: 500;
     margin: 0 0 50px;
     text-align: center;
+
+    @include mobile {
+      font-size: 24px;
+      margin-bottom: 35px;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -271,6 +400,11 @@ body {
     text-align: center;
     margin: 0 30px;
     box-shadow: 0 8px 11px 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(212, 212, 212, 0.5);
+
+    @include mobile {
+      width: 100%;
+      margin: 0 0 40px;
+    }
   }
 
   &__name {
@@ -338,11 +472,19 @@ body {
 .clients {
   padding-top: 80px;
 
+  @include mobile {
+    padding: 20px 24px 0;
+  }
+
   h3 {
     font-size: 32px;
     font-weight: 500;
     margin: 0 0 0px;
     text-align: center;
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__list {
@@ -350,6 +492,21 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 40px 0 0px;
+
+    @include mobile {
+      display: block;
+      padding-top: 20px;
+    }
+
+    .client {
+      @include mobile {
+        display: inline-block;
+        vertical-align: middle;
+        width: 49%;
+        text-align: center;
+        padding: 20px 0;
+      }
+    }
   }
 }
 
@@ -359,21 +516,40 @@ body {
   font-size: 16px;
   font-weight: 500;
 
+  @include mobile {
+    padding: 50px 0;
+  }
+
   h3 {
     margin: 0 0 0px;
     font-size: 600px;
     font-size: 32px;
     line-height: 1.2em;
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__text {
     padding-right: 40px;
+  }
+
+  &__form {
+    @include mobile {
+      width: 100%;
+      padding-top: 20px;
+    }
   }
 
   input {
@@ -388,6 +564,10 @@ body {
     font-weight: 600;
     color: #2e3343;
     padding: 0 40px 0 20px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   button {
@@ -406,12 +586,23 @@ body {
     background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
     margin-left: -30px;
     cursor: pointer;
+
+    @include mobile {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 15px;
+      border-radius: 7px;
+    }
   }
 }
 
 .video {
   position: relative;
   padding-top: 60px;
+
+  @include mobile {
+    padding-top: 30px;
+  }
 
   &:after {
     content: "";
@@ -426,6 +617,10 @@ body {
   .container {
     position: relative;
     z-index: 10;
+
+    @include mobile {
+      padding: 0;
+    }
   } 
 
   &__wrapper {
@@ -455,12 +650,21 @@ body {
   //overflow: hidden;
   box-shadow: 0 9px 34px 0 rgba(0, 0, 0, 0.11);
 
+  @include mobile {
+    overflow: hidden;
+  }
+
   &__content {
     height: 550px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    @include mobile {
+      flex-direction: column;
+      height: auto;;
+    }
   }
 
   &__text {
@@ -471,11 +675,24 @@ body {
     position: absolute;
     right: -100px;
     bottom: 0;
+
+    @include mobile {
+      position: relative;
+      right: 0;
+      margin: 0 -24px;
+      overflow: hidden;
+    }
   }
 
   #lottie {
     width: 600px;
     height: 600px;
+
+    @include mobile {
+      width: 500;
+      height: 600px;
+    }
+    
   }
 
   &__try {
@@ -510,6 +727,11 @@ body {
     color: #f93e56;
     margin: 0;
     padding: 0;
+
+    @include mobile {
+      font-size: 40px;
+      padding-right: 30px;
+    }
   }
 }
 
@@ -554,7 +776,7 @@ body {
       overflow: hidden;
       text-indent: -9999px;
       background-color: 83f52;
-      background-image: url(/images/arrow-icon.svg);
+      background-image: url(../images/arrow-icon.svg);
       background-position: center center;
       background-repeat: no-repeat;
       border: solid 1px #4f5567;
@@ -590,10 +812,83 @@ body {
   }
 
   &__slide-text {
-    max-width: 540px;
+    width: 50%;
+  }
+
+  &__slide-image {
+    width: 50%;
+    text-align: center;
+
+    img {
+      display: inline-block;
+    }
   }
 }
 
 .popup-form {
   border-radius: 5px;
+
+  &__content {
+    h3 {
+      margin: 0 0 20px;
+      font-size: 21px;
+      font-weight: 500;
+    }
+
+    button {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 56px;
+      font-size: 16px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: 0.2px;
+      text-align: center;
+      color: #fff;
+      border: none;
+      border-radius: 7px;
+      box-shadow: 0 3px 7px 0 rgba(50, 50, 50, 0.21);
+      background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
+      cursor: pointer;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        width: 56px;
+        background: url(../images/arrow-icon.svg) no-repeat center center;
+      }
+    }
+  }
+}
+
+.row {
+  padding-bottom: 24px;
+
+  label {
+    display: block;
+    font-size: 12px;
+  }
+
+  input {
+    width: 100%;
+    font-size: 14px;
+    color: $blue;
+    padding: 0 15px;
+    border: solid 1px #ebedef;
+    height: 46px;
+    border-radius: 5px;
+
+    &:focus {
+      box-shadow: none;
+      border-color: rgba(0,0,0, 0.2);
+      outline: none;
+      outline-width: 0;
+    }
+  }
 }

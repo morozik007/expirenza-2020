@@ -101,7 +101,7 @@ module.exports = {
       {
         from: './src/images',
         to: './images'
-      },
+      }
     ]),
   ].concat(htmlPlugins)
 };

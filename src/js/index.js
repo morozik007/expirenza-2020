@@ -5,6 +5,8 @@ require("@fancyapps/fancybox");
 //import popper from 'popper.js';
 //import bootstrap from 'bootstrap';
 
+
+
 $(function() {
     //jQuery('body').css('color', 'red');
     console.log('working');
@@ -20,8 +22,16 @@ $(function() {
         }, 1000, 'swing');
     });
 
-    $('[data-fancybox]').fancybox();
+    $('[data-fancybox]').fancybox({
+        touch: {
+            vertical: false, // Allow to drag content vertically
+            momentum: false // Continue movement after releasing mouse/touch when panning
+        }
+    });
 
     $('.oppo__slider').slick();
+
     
+
+    //    
 });

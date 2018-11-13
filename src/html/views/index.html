@@ -4,11 +4,11 @@
 
 <%= _.template(require('./../includes/header.html'))(data) %>
 
-<section class="hero">
+<section class="hero" id="hero">
   <div class="container">
     <div class="hero__content">
       <div class="hero__text">
-        <h3>Узнай о проблемах раньше чем Facebook</h3>
+        <h3 id="heroTitle">Узнай о проблемах раньше чем Facebook</h3>
         <p>Expirenza — cовременный сервис обратной связи для бизнеса</p>
         <a class="hero__try" href="javascript:;" data-fancybox data-src="#try-free">Попробовать</a>
       </div>
@@ -31,7 +31,7 @@
             *(неограниченное колличество)
           </div>
           <div class="oppo__slide-image">
-            image
+            <img src="images/slide1.png" alt="">
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@
             Ваши клиенты могут оставить отзыв с фото, видео и даже аудио
           </div>
           <div class="oppo__slide-image">
-            image
+            <img src="images/slide2.png" alt="">
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@
             Расписать про уведомления в чат-бот
           </div>
           <div class="oppo__slide-image">
-            image
+            <img src="images/slide3.png" alt="">
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
             Возможности админки отчёты, ответы клиентам, аналитика
           </div>
           <div class="oppo__slide-image">
-            image
+            <img src="images/slide4.png" alt="">
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@
             промо-коды/сертификаты, NPS, голосовые уведомления, система скидок 
           </div>
           <div class="oppo__slide-image">
-            image
+            <img src="images/slide5.png" alt="">
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@
             промо-коды/сертификаты, NPS, голосовые уведомления, система скидок 
           </div>
           <div class="oppo__slide-image">
-            image
+            <img src="images/slide6.png" alt="">
           </div>
         </div>
       </div>
@@ -124,19 +124,19 @@
     <div class="why__content">
       <div class="why__item">
         <figure>
-          <img src="/images/why-qr.svg" width="72" height="128" alt="">
+          <img src="images/why-qr.svg" width="72" height="128" alt="">
         </figure>
         Не нужно устанавливать приложение, только<br> считать QR-код
       </div>
       <div class="why__item">
         <figure>
-          <img src="/images/why-bubble.svg" width="180" height="103" alt="">
+          <img src="images/why-bubble.svg" width="180" height="103" alt="">
         </figure>
         Мгновенная связь клиент-руководитель
       </div>
       <div class="why__item">
         <figure>
-          <img src="/images/why-24.svg" width="132" height="134" alt="">
+          <img src="images/why-24.svg" width="132" height="134" alt="">
         </figure>
         Запуск в работу уже сегодня
       </div>
@@ -197,22 +197,22 @@
   <div class="container">
     <div class="clients__list">
       <div class="client">
-        <img src="/images/medokom-logo.svg" width="86" height="28" alt="">
+        <img src="images/medokom-logo.svg" width="86" height="28" alt="">
       </div>
       <div class="client">
-        <img src="/images/iqos-logo.svg" width="106" height="28" alt="">
+        <img src="images/iqos-logo.svg" width="106" height="28" alt="">
       </div>
       <div class="client">
-        <img src="/images/vdnh-logo.svg" width="40" height="72" alt="">
+        <img src="images/vdnh-logo.svg" width="40" height="72" alt="">
       </div>
       <div class="client">
-        <img src="/images/citrus-logo.svg" width="110" height="28" alt="">
+        <img src="images/citrus-logo.svg" width="110" height="28" alt="">
       </div>
       <div class="client">
-        <img src="/images/m-logo.svg" width="32" height="32" alt="">
+        <img src="images/m-logo.svg" width="32" height="32" alt="">
       </div>
       <div class="client">
-        <img src="/images/kurazh-logo.svg" width="77" height="40" alt="">
+        <img src="images/kurazh-logo.svg" width="77" height="40" alt="">
       </div>
     </div>
 
@@ -245,7 +245,20 @@
 </section>
 
 <div class="popup-form" style="display: none;" id="try-free">
-  тут будет форма Оформить пробный период
+  <div class="popup-form__content">
+    <h3>Оформить пробный период</h3>
+    <form action="" autocomplete="off">
+      <div class="row">
+        <label for="email">Ваш email</label>
+        <input type="text" name="" id="email">
+      </div>
+      <div class="row">
+        <label for="phone">Ваш телефон</label>
+        <input type="text" name="" id="phone">
+      </div>
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
 </div>
 
 <%= _.template(require('./../includes/footer.html'))(data) %>
