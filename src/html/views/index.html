@@ -4,6 +4,119 @@
 
 <%= _.template(require('./../includes/header.html'))(data) %>
 
+<section class="hero">
+  <div class="container">
+    <div class="hero__content">
+      <div class="hero__text">
+        <h3>Узнай о проблемах раньше чем Facebook</h3>
+        <p>Expirenza — cовременный сервис обратной связи для бизнеса</p>
+        <a href="" class="hero__try">Попробовать</a>
+      </div>
+      <div class="hero__animation">
+        <%= _.template(require('./../includes/lottie.html'))(data) %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="oppo">
+  <div class="container">
+    <div class="oppo__title">Возможности</div>
+
+    <div class="oppo__slider">
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Личный ответ по SMS</h3>
+            *(неограниченное колличество)
+          </div>
+          <div class="oppo__slide-image">
+            image
+          </div>
+        </div>
+      </div>
+
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Всё понимает </h3>
+            Ваши клиенты могут оставить отзыв с фото, видео и даже аудио
+          </div>
+          <div class="oppo__slide-image">
+            image
+          </div>
+        </div>
+      </div>
+
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Всегда на связи</h3>
+            Расписать про уведомления в чат-бот
+          </div>
+          <div class="oppo__slide-image">
+            image
+          </div>
+        </div>
+      </div>
+
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Держит в курсе</h3>
+            Возможности админки отчёты, ответы клиентам, аналитика
+          </div>
+          <div class="oppo__slide-image">
+            image
+          </div>
+        </div>
+      </div>
+
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Дополнительные возможности</h3>
+            промо-коды/сертификаты, NPS, голосовые уведомления, система скидок 
+          </div>
+          <div class="oppo__slide-image">
+            image
+          </div>
+        </div>
+      </div>
+
+      <div class="oppo__slide">
+        <div class="oppo__slide-content">
+          <div class="oppo__slide-text">
+            <h3>Сертификаты</h3>
+            промо-коды/сертификаты, NPS, голосовые уведомления, система скидок 
+          </div>
+          <div class="oppo__slide-image">
+            image
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="free">
+  <div class="container">
+    <div class="free__content">
+      <div class="free__text">
+        <h3>Попробовать бесплатно</h3>
+        14 дней + unlimited sms
+      </div>
+      <div class="free__form">
+        <form action="">
+          <input type="text" name="" placeholder="Введите ваш email">
+          <button type="submit">Попробовать сейчас</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="why">
   <div class="container">
     <h3>Почему Expirenza?</h3>
@@ -33,7 +146,12 @@
 
 <section class="analytics">
   <h3>Expirenza аналитика</h3>
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore explicabo asperiores, praesentium culpa minima esse libero suscipit nulla perferendis cupiditate optio, aspernatur quis alias beatae dignissimos quam reprehenderit quia adipisci.
+  <div class="analytics__box">
+      <span class="analytics__text-1">График активности</span>
+      <span class="analytics__text-2">Общие отчёты</span>
+      <span class="analytics__text-3">Отчёты NPS</span>
+      <span class="analytics__text-4">Отчёты Промо-коды</span>
+  </div>
 </section>
 
 <section class="price">
@@ -98,6 +216,31 @@
       </div>
     </div>
 
+  </div>
+</section>
+
+<section class="video">
+  <div class="container">
+    <div class="video__wrapper">
+      <iframe width="100%" height="" src="https://www.youtube.com/embed/1-HJ-zHiWKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="free">
+  <div class="container">
+    <div class="free__content">
+      <div class="free__text">
+        <h3>Попробовать бесплатно</h3>
+        14 дней + unlimited sms
+      </div>
+      <div class="free__form">
+        <form action="">
+          <input type="text" name="" placeholder="Введите ваш email">
+          <button type="submit">Попробовать сейчас</button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
