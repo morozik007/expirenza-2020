@@ -47,7 +47,7 @@ body {
   align-items: center;
   background: $blue;
   color: #fff;
-  padding: 24px 40px;
+  padding: 24px 110px 24px 40px;
 
   position: fixed;
   left: 0;
@@ -73,10 +73,10 @@ body {
     display: none;
 
     position: absolute;
-    right: 20px;
-    top: 27px;
-    width: 24px;
-    height: 24px;
+    right: 10px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
     padding: 2px;
 
     span {
@@ -88,14 +88,14 @@ body {
       //width: 100%;
       background: #fff;
       opacity: 1;
-      left: 2px;
+      left: 8px;
       transform: rotate(0deg);
       transition: .25s ease-in-out;
 
-      &:nth-child(1) { top: 2px; }
+      &:nth-child(1) { top: 10px; }
       &:nth-child(2),
-      &:nth-child(3) { top: 10px; }
-      &:nth-child(4) { top: 18px; }
+      &:nth-child(3) { top: 18px; }
+      &:nth-child(4) { top: 26px; }
     }
 
     &.active {
@@ -103,7 +103,7 @@ body {
       
       span {
         &:nth-child(1) { 
-          top: 11px;
+          top: 19px;
           width: 0%;
           left: 50%; 
         }
@@ -117,7 +117,7 @@ body {
         }
 
         &:nth-child(4) { 
-          top: 18px;
+          top: 26px;
           width: 0%;
           left: 50%;
         }
@@ -191,6 +191,44 @@ body {
           text-align: center;
           padding: 15px;
         }
+      }
+    }
+  }
+
+  .language {
+    position: absolute;
+    top: 27px;
+    right: 40px;
+    width: 47px;
+
+    @include mobile {
+      right: 65px;
+    } 
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 15px;
+      background: $blue url(../images/triangle.svg) no-repeat center center;
+      pointer-events: none;
+    }
+
+    select {
+      width: 100%;
+      -webkit-appearance: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #9da0aa;
+      font-size: 16px;
+      text-transform: uppercase;
+      outline: none;
+
+      option {
+        color: #000;
       }
     }
   }
@@ -706,10 +744,10 @@ body {
 
 .video {
   position: relative;
-  padding-top: 60px;
+  margin-top: 60px;
 
   @include mobile {
-    padding-top: 30px;
+    margin-top: 30px;
   }
 
   &:after {
@@ -729,7 +767,87 @@ body {
     @include mobile {
       padding: 0;
     }
-  } 
+  }
+
+  &__slider {
+    position: relative;
+    background: url(../images/ajax-loader.gif) no-repeat center center;
+
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      z-index: 20;
+      left: -24px;
+      bottom: 50%;
+      margin-bottom: -24px;
+      width: 48px;
+      height: 48px;
+      overflow: hidden;
+      text-indent: -9999px;
+      background-image: url(../images/arrow-right-red.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: solid 1px #fff;
+      box-shadow: 0 8px 11px 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(212, 212, 212, 0.5);
+      background-color: #fff;
+      border-radius: 100%;
+      outline: none;
+      cursor: pointer;
+
+      @include mobile {
+        display: none !important;
+      }
+
+      &:hover {
+        background-color: darken(#fff, 15%);
+      }
+    }
+
+    .slick-prev {
+      transform: rotate(-180deg);
+    }
+
+    .slick-next {
+      left: auto;
+      right: -24px;
+    }
+
+    .slick-dots {
+      list-style: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+
+      @include mobile {
+        padding-top: 10px;
+      }
+
+      li {
+        display: inline-block;
+        padding: 5px 5px 0;
+
+        &.slick-active {
+          button {
+            background: $blue;
+          }
+        }
+
+        button {
+          display: block;
+          width: 10px;
+          height: 10px;
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+          text-indent: -9999px;
+          border: solid 1px $blue;
+          border-radius: 100%;
+          background: #fff;
+          outline: none;
+        }
+      }
+    }
+  }
 
   &__wrapper {
     position: relative;
@@ -849,7 +967,7 @@ body {
 
   @include mobile {
     background: #fff;
-    padding: 65px 0 30px;
+    padding: 65px 0 60px;
     overflow: hidden;
   }
 

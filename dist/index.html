@@ -14,7 +14,7 @@
 
 <body>
   <header class="header">
-    <a href="#hero" class="logo navigation__link"></a>
+    <a href="#top" class="logo"></a>
     <nav class="navigation">
       <a class="navigation__link" href="#opportunities">Возможности</a>
       <a class="navigation__link" href="#why">Почему Expirenza?</a>
@@ -24,13 +24,27 @@
       <a class="" href="">Войти</a>
       <a class="try" href="javascript:;" data-fancybox data-src="#try-free">Попробовать</a>
     </nav>
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="language">
+      <select name="" id="">
+          <option value="">Ua</option>
+          <option value="">En</option>
+          <option value="">Es</option>
+          <option value="">Ro</option>
+        </select>
+    </div>
   </header>
 
   <section class="hero" id="hero">
     <div class="container">
       <div class="hero__content">
         <div class="hero__text">
-          <h3>Узнай о проблемах раньше чем Facebook</h3>
+          <h3 id="heroTitle">Узнай о проблемах раньше чем Facebook</h3>
           <p>Expirenza — cовременный сервис обратной связи для бизнеса</p>
           <a class="hero__try" href="javascript:;" data-fancybox data-src="#try-free">Попробовать</a>
         </div>
@@ -19021,7 +19035,7 @@
               *(неограниченное колличество)
             </div>
             <div class="oppo__slide-image">
-              <img src="/images/slide1.png" alt="">
+              <img src="images/sms.svg" alt="">
             </div>
           </div>
         </div>
@@ -19033,7 +19047,7 @@
               Ваши клиенты могут оставить отзыв с фото, видео и даже аудио
             </div>
             <div class="oppo__slide-image">
-              <img src="/images/slide2.png" alt="">
+              <img src="images/ponimaet.svg" alt="">
             </div>
           </div>
         </div>
@@ -19045,7 +19059,7 @@
               Расписать про уведомления в чат-бот
             </div>
             <div class="oppo__slide-image">
-              <img src="/images/slide3.png" alt="">
+              <img src="images/bot.svg" alt="">
             </div>
           </div>
         </div>
@@ -19057,7 +19071,7 @@
               Возможности админки отчёты, ответы клиентам, аналитика
             </div>
             <div class="oppo__slide-image">
-              <img src="/images/slide4.png" alt="">
+              <img src="images/vkurse.svg" alt="">
             </div>
           </div>
         </div>
@@ -19069,7 +19083,7 @@
               промо-коды/сертификаты, NPS, голосовые уведомления, система скидок
             </div>
             <div class="oppo__slide-image">
-              <img src="/images/slide5.png" alt="">
+              <img src="images/promo.svg" alt="">
             </div>
           </div>
         </div>
@@ -19081,7 +19095,7 @@
               промо-коды/сертификаты, NPS, голосовые уведомления, система скидок
             </div>
             <div class="oppo__slide-image">
-              <img src="/images/slide6.png" alt="">
+              <img src="images/certificate.svg" alt="">
             </div>
           </div>
         </div>
@@ -19114,19 +19128,19 @@
       <div class="why__content">
         <div class="why__item">
           <figure>
-            <img src="/images/why-qr.svg" width="72" height="128" alt="">
+            <img src="images/why-qr.svg" width="72" height="128" alt="">
           </figure>
           Не нужно устанавливать приложение, только<br> считать QR-код
         </div>
         <div class="why__item">
           <figure>
-            <img src="/images/why-bubble.svg" width="180" height="103" alt="">
+            <img src="images/why-bubble.svg" width="180" height="103" alt="">
           </figure>
           Мгновенная связь клиент-руководитель
         </div>
         <div class="why__item">
           <figure>
-            <img src="/images/why-24.svg" width="132" height="134" alt="">
+            <img src="images/why-24.svg" width="132" height="134" alt="">
           </figure>
           Запуск в работу уже сегодня
         </div>
@@ -19178,22 +19192,22 @@
     <div class="container">
       <div class="clients__list">
         <div class="client">
-          <img src="/images/medokom-logo.svg" width="86" height="28" alt="">
+          <img src="images/medokom-logo.svg" width="86" height="28" alt="">
         </div>
         <div class="client">
-          <img src="/images/iqos-logo.svg" width="106" height="28" alt="">
+          <img src="images/iqos-logo.svg" width="106" height="28" alt="">
         </div>
         <div class="client">
-          <img src="/images/vdnh-logo.svg" width="40" height="72" alt="">
+          <img src="images/vdnh-logo.svg" width="40" height="72" alt="">
         </div>
         <div class="client">
-          <img src="/images/citrus-logo.svg" width="110" height="28" alt="">
+          <img src="images/citrus-logo.svg" width="110" height="28" alt="">
         </div>
         <div class="client">
-          <img src="/images/m-logo.svg" width="32" height="32" alt="">
+          <img src="images/m-logo.svg" width="32" height="32" alt="">
         </div>
         <div class="client">
-          <img src="/images/kurazh-logo.svg" width="77" height="40" alt="">
+          <img src="images/kurazh-logo.svg" width="77" height="40" alt="">
         </div>
       </div>
 
@@ -19202,8 +19216,17 @@
 
   <section class="video" id="feedback">
     <div class="container">
-      <div class="video__wrapper">
-        <iframe width="100%" height="" src="https://www.youtube.com/embed/1-HJ-zHiWKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video__slider">
+        <div class="video__slide">
+          <div class="video__wrapper">
+            <iframe width="100%" height="" src="https://www.youtube.com/embed/1-HJ-zHiWKo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="video__slide">
+          <div class="video__wrapper">
+            <iframe width="100%" height="" src="https://www.youtube.com/embed/rj5sX7TW0yo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </section>

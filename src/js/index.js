@@ -38,6 +38,9 @@ $(function() {
     });
 
     $('.oppo__slider').slick();
+    $('.video__slider').slick({
+        dots: true
+    });
 
     
 
