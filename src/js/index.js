@@ -11,11 +11,19 @@ $(function() {
     //jQuery('body').css('color', 'red');
     console.log('working');
 
+    $('.menu-toggle').click(function(){
+		$(this).toggleClass('active');
+		$('.navigation').toggleClass('open');
+	});
+
     $('a.navigation__link[href^="#"]').on('click', function (e) {
         e.preventDefault();
 
         var target = this.hash;
         var $target = $(target);
+
+        $('.menu-toggle').toggleClass('active');
+        $('.navigation').toggleClass('open');
 
         $('html, body').animate({
             'scrollTop': $target.offset().top-80
