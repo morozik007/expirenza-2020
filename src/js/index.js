@@ -2,6 +2,7 @@ var $ = require("jquery");
 window.jQuery = $;
 import 'slick-carousel';
 require("@fancyapps/fancybox");
+require("jquery-validation");
 //import popper from 'popper.js';
 //import bootstrap from 'bootstrap';
 
@@ -41,6 +42,10 @@ $(function() {
     $('.video__slider').slick({
         dots: true
     });
+
+    $("#first-try-form").validate();
+    $("#second-try-form").validate();
+    $("#popup-try-form").validate();
 
     
 
