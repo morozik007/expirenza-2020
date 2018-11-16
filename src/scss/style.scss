@@ -1213,3 +1213,28 @@ body {
     font-size: 12px;
   }
 }
+
+button[disabled] {
+  //opacity: 0.5;
+  cursor: default !important;
+  background-image: linear-gradient(to left, #dd3f54 0%, #db6e6b 100%) !important;
+}
+
+.fancybox-bg {
+  background: #383f52;
+}
+
+.fancybox-content {
+  border-radius: 5px;
+}
+
+.popup-transparent .fancybox-content {
+  background: transparent;
+  color: #fff;
+  text-align: center;
+
+  h4 {
+    font-size: 21px;
+    max-width: 300px;
+  }
+}
