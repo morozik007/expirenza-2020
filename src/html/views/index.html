@@ -13,7 +13,7 @@
         <a class="hero__try" href="javascript:;" data-fancybox data-src="#try-free">Попробовать</a>
       </div>
       <div class="hero__animation">
-        <div id="lottie"></div>
+        <%= _.template(require('./../includes/lottie.html'))(data) %>
       </div>
     </div>
   </div>
