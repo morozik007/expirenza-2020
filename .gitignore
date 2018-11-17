@@ -151,3 +151,8 @@ sftp-config.json
 .settings/
 .vscode/
 /src/.DS_Store
+/dist/css/style.bundle.css
+/dist/css/style.bundle.css.map
+/dist/js/bundle.js
+/dist/index.html
+/dist/js/bundle.js.map
