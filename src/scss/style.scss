@@ -10,6 +10,10 @@
     }
 }
 
+button, input {
+  -webkit-appearance: none;
+}
+
 $red: #f93e56;
 $blue: #3b4256;
 
@@ -182,6 +186,13 @@ body {
         box-shadow: 0 3px 7px 0 rgba(50, 50, 50, 0.21);
         background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
 
+        &:hover{
+          background-image: linear-gradient(to left, #ef726e 0%, #ed4262 100%);
+        }
+        &:active {
+          background-image: linear-gradient(to left, #d6364b 0%, #db5854 100%);
+        }
+
         @include mobile {
           position: absolute;
           left: 24px;
@@ -316,7 +327,7 @@ body {
     background-image: url(../images/qr.svg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 152px 152px;
+    background-size: 180px 180px;
     border-radius: 100%;
     text-align: center;
 
@@ -612,6 +623,13 @@ body {
     margin: 0 auto 40px;
     text-decoration: none;
     padding: 7px 0;
+
+    &:hover{
+      background: #ffedef;
+    }
+    &:active {
+      background: #fadde0;
+    }
   }
 }
 
@@ -733,6 +751,13 @@ body {
     position: relative;
     z-index: 2;
 
+    &:hover{
+      background-image: linear-gradient(to left, #ef726e 0%, #ed4262 100%);
+    }
+    &:active {
+      background-image: linear-gradient(to left, #d6364b 0%, #db5854 100%);
+    }
+
     @include mobile {
       width: 100%;
       margin-left: 0;
@@ -750,7 +775,7 @@ body {
 
     @include mobile {
       width: 100%;
-      padding-bottom: 20px;
+      padding-bottom: 0px;
     }
 
     label.error {
@@ -761,6 +786,8 @@ body {
 
       @include mobile {
         text-align: center;
+        position: relative;
+        padding-top: 3px;
       }
     }
   }
@@ -897,7 +924,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   position: relative;
-  //overflow: hidden;
+  overflow: hidden;
   box-shadow: 0 9px 34px 0 rgba(0, 0, 0, 0.11);
 
   @include mobile {
@@ -913,7 +940,8 @@ body {
 
     @include mobile {
       flex-direction: column;
-      height: auto;;
+      height: auto;
+      padding-top: 30px;
     }
   }
 
@@ -965,6 +993,13 @@ body {
     border-radius: 7px;
     box-shadow: 0 3px 7px 0 rgba(50, 50, 50, 0.21);
     background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
+
+    &:hover{
+      background-image: linear-gradient(to left, #ef726e 0%, #ed4262 100%);
+    }
+    &:active {
+      background-image: linear-gradient(to left, #d6364b 0%, #db5854 100%);
+    }
   }
 
   h3 {
@@ -1167,6 +1202,13 @@ body {
       background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
       cursor: pointer;
 
+      &:hover{
+        background-image: linear-gradient(to left, #ef726e 0%, #ed4262 100%);
+      }
+      &:active {
+        background-image: linear-gradient(to left, #d6364b 0%, #db5854 100%);
+      }
+
       &:after {
         content: "";
         position: absolute;
@@ -1196,6 +1238,7 @@ body {
     border: solid 1px #ebedef;
     height: 46px;
     border-radius: 5px;
+    -webkit-appearance: none;
 
     &:focus {
       box-shadow: none;
