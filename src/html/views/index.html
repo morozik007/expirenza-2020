@@ -108,12 +108,7 @@
         14 дней + unlimited sms
       </div>
       <div class="free__form">
-        <form action="send.php" method="post" id="first-try-form" class="sendForm email-form">
-          <div class="email-container">
-            <input type="text" placeholder="Введите ваш email" name="email" data-rule-required="true" data-rule-email="true" data-msg-required="Введите Ваш e-mail" data-msg-email="Введите правильный e-mail">
-          </div>
-          <button type="submit" id="first-try-submit">Попробовать сейчас</button>
-        </form>
+        <a class="free__button" href="javascript:;" data-fancybox data-src="#try-free">Попробовать сейчас</a>
       </div>
     </div>
   </div>
@@ -160,34 +155,35 @@
   <h3>Тарифы</h3>
   <div class="price__content">
     <div class="price__item">
-      <div class="price__name">Фермер</div>
+      <div class="price__name">Business</div>
       <div class="price__cost">
           <span>1500</span> <small>грн / месяц<br>локация</small>
       </div>
       <div class="price__benefits">
-        Unlimited SMS <br>
-        Text & photo<br>
-        Analytics<br>
-        Telegram bot<br>
-        Gifts Coupon system
+        Текст<br>
+        Фото<br>
+        Неограниченное к-во SMS<br> 
+        Аналитика<br>
+        Сертификаты<br>
+        Telegram Bot<br>
       </div>
       <a href="javascript:;" data-fancybox data-src="#try-free" class="price__try">Попробовать</a>
     </div>
 
     <div class="price__item">
-      <div class="price__name">Охотник</div>
+      <div class="price__name">Pro</div>
       <div class="price__cost">
           <span>2500</span> <small>грн / месяц<br>локация</small>
       </div>
       <div class="price__benefits">
-        Unlimited SMS<br>
-        Text & photo<br>
-        Video & audio<br>
-        Analytics<br>
-        Telegram bot<br>
-        Gifts Coupon system<br>
-        Personal operator<br>
-        Sms рассылка
+        Текст<br>
+        Фото<br>
+        Неограниченное к-во SMS<br>
+        Аналитика <br>
+        Бонусы, баллы, сертификаты<br>
+        NPS<br>
+        Telegram Bot<br>
+        SMS рассылка<br>
       </div>
       <a href="javascript:;" data-fancybox data-src="#try-free" class="price__try">Попробовать</a>
     </div>
@@ -241,12 +237,15 @@
         14 дней + unlimited sms
       </div>
       <div class="free__form">
-        <form action="send.php" method="post" id="second-try-form" class="sendForm email-form">
+        <div class="free__form">
+          <a class="free__button" href="javascript:;" data-fancybox data-src="#try-free">Попробовать сейчас</a>
+        </div>
+        <!-- <form action="send.php" method="post" id="second-try-form" class="sendForm email-form">
           <div class="email-container">
             <input type="text" placeholder="Введите ваш email" name="email" data-rule-required="true" data-rule-email="true" data-msg-required="Введите Ваш e-mail" data-msg-email="Введите правильный e-mail">
           </div>
           <button type="submit" id="second-try-submit">Попробовать сейчас</button>
-        </form>
+        </form> -->
       </div>
     </div>
   </div>
@@ -262,7 +261,7 @@
       </div>
       <div class="row">
         <label for="phone">Ваш телефон</label>
-        <input type="text" name="phone" id="phone" data-rule-required="true" data-rule-number="true" data-msg-required="Введите Ваш номер телефона" data-msg-number="Введите правильный номер телефона">
+        <input type="text" name="phone" id="phone" data-rule-required="true" data-msg-required="Введите Ваш номер телефона" data-msg-number="Введите правильный номер телефона">
       </div>
       <button type="submit" id="popup-try-submit">Отправить</button>
     </form>

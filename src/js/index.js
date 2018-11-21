@@ -1,10 +1,16 @@
 var $ = require("jquery");
 window.jQuery = $;
 import 'slick-carousel';
+//require("inputmask");
+//import Inputmask from "inputmask";
 require("@fancyapps/fancybox");
 require("jquery-validation");
 //import popper from 'popper.js';
 //import bootstrap from 'bootstrap';
+
+// var selector = document.getElementById("phone");
+// var im = new Inputmask({"mask": "+38(999)999-99-99"});
+// im.mask(selector);
 
 $(function() {
 
@@ -39,9 +45,22 @@ $(function() {
         dots: true
     });
 
-    $("#first-try-form").validate();
-    $("#second-try-form").validate();
-    $("#popup-try-form").validate();
+    //$('#phone').inputmask({"mask": "+38(999)999-99-99"});
+    // $("#first-try-form").validate();
+    // $("#second-try-form").validate();
+    $("#popup-try-form").validate(
+        // rules:{
+        //     phoneUS:
+        //     {
+        //     required:true,
+        //     phoneUS:true
+        //     }
+        // }
+    );
+
+    // $.validator.addMethod( "phoneUS", function( phone_number, element ) {
+    //     return phone_number.match(/^\+[1-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{4}$/)
+    // }, "Please specify a valid phone number" );
 
     // $('#first-try-form input').on('submit', function(e) {
     //     e.preventDefault();
