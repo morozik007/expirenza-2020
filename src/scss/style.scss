@@ -187,7 +187,7 @@ body {
         background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
 
         &:hover{
-          background-image: linear-gradient(to left, #ef726e 0%, #ed4262 100%);
+          background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
         }
         &:active {
           background-image: linear-gradient(to left, #d6364b 0%, #db5854 100%);
@@ -323,7 +323,7 @@ body {
   &__code {
     width: 288px;
     height: 288px;
-    background-color: #383f52;
+    background-color: #fff;
     background-image: url(../images/qr.svg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -752,10 +752,12 @@ body {
     z-index: 2;
 
     &:hover{
-      background-image: linear-gradient(to left, #ef726e 0%, #ed4262 100%);
+      background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
+      box-shadow: none;
     }
     &:active {
       background-image: linear-gradient(to left, #d6364b 0%, #db5854 100%);
+      box-shadow: none;
     }
 
     @include mobile {
@@ -995,7 +997,7 @@ body {
     background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
 
     &:hover{
-      background-image: linear-gradient(to left, #ef726e 0%, #ed4262 100%);
+      background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
     }
     &:active {
       background-image: linear-gradient(to left, #d6364b 0%, #db5854 100%);
@@ -1199,10 +1201,12 @@ body {
       cursor: pointer;
 
       &:hover{
-        background-image: linear-gradient(to left, #ef726e 0%, #ed4262 100%);
+        background-image: linear-gradient(to left, #f93e56 0%, #fe6561 100%);
+        box-shadow: none;
       }
       &:active {
         background-image: linear-gradient(to left, #d6364b 0%, #db5854 100%);
+        box-shadow: none;
       }
 
       &:after {
