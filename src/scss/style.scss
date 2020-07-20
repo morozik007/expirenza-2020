@@ -51,6 +51,7 @@ body {
   font-size: 1.8rem;
   text-align: center;
   position: relative;
+  z-index: 1;
 
   @include mobile {
     padding: 10rem 2rem 2rem;
@@ -160,6 +161,7 @@ body {
 
 .header {
   position: fixed;
+  z-index: 99;
   left: 0;
   top: 0;
   right: 0;
@@ -171,11 +173,33 @@ body {
   @include mobile {
     padding: 0 2rem;
     height: 5.5rem;
+
+    .connect-me {
+      display: none;
+    }
   }
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &__close {
+    display: none;
+
+    width: 6.8rem;
+    height: 6.8rem;
+    line-height: 6.8rem;
+    background: #fff;
+    border-radius: 100%;
+    color: #000;
+    font-size: 9rem;
+    text-align: center;
+    cursor: pointer;
+
+    @include mobile {
+      display: inline-block;
+    }
+  }
 
   &__content {
     display: flex;
@@ -183,6 +207,17 @@ body {
 
     @include mobile {
       display: none;
+
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
   }
 
@@ -218,6 +253,14 @@ body {
       color: #000;
       font-size: 1.8rem;
       margin-right: 4.5rem;
+
+      @include mobile {
+        font-size: 4rem;
+        color: #fff;
+        margin: 0 0 1rem;
+        display: block;
+        text-align: center;
+      }
 
       &.current {
         font-weight: bold;
