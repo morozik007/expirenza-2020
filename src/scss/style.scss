@@ -111,6 +111,11 @@ body {
       background: url(../images/exp-dimmed.svg) no-repeat left center;
       background-size: contain;
       position: relative;
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
 
       &:after {
         content: "";
@@ -279,6 +284,10 @@ body {
     border: 1px solid #D5D5D5;
     border-radius: 4px;
 
+    &:hover {
+      border-color: darkgrey;
+    }
+
     @include mobile {
       display: block;
       width: 100px;
@@ -300,6 +309,7 @@ body {
     }
 
     select {
+      font-family: 'Montserrat', sans-serif;
       width: 100%;
       height: 4.9rem;
       -webkit-appearance: none;
@@ -353,4 +363,183 @@ body {
   background: linear-gradient(180deg, #54DE00 0%, #54DE00 100%);
   box-shadow: 0px 15px 50px rgba(0, 66, 145, 0.4);
   border-radius: 8px;
+}
+
+
+.hero {
+  text-align: center;
+  margin-bottom: 6rem;
+
+  img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  &__text {
+    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    font-size: 2.2rem;
+  }
+}
+
+.how-it-works {
+  //border: solid 1px red;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 160rem;
+  margin: 0 auto 10rem;
+  padding: 0 2rem;
+
+  &__item {
+    //border: solid 1px blue;
+    width: 50%;
+    text-align: center;
+    padding: 5rem 5rem 6rem;
+
+    &--1 {
+      background: #FFDFDE;
+      border-radius: 30px 0px 0px 0px;
+    }
+
+    &--2 {
+      background: #FEFFCB;
+      border-radius: 0 30px 0px 0px;
+    }
+
+    &--3 {
+      background: #E5F3FF;
+    }
+
+    &--4 {
+      background: #EEE5FF;
+    }
+
+    &--5 {
+      background: #EDFFC8;
+      border-radius: 0px 0px 0px 30px;
+    }
+
+    &--6 {
+      background: #FFE5F6;
+      border-radius: 0px 0px 30px 0px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 55rem;
+    margin: 0 auto 3rem;
+  }
+
+  &__image {
+    //border: solid 1px red;
+    margin: 0 auto 2rem;
+    height: 39rem;
+    max-width: 51rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      //width: 100%;
+      height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      //border: solid 1px green;
+    }
+  }
+}
+
+.more {
+  border: 1px solid #000000;
+  border-radius: 6px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.9rem 2rem 0.8rem;
+}
+
+.connect {
+  padding: 0 2rem 15rem;
+
+  &__content {
+    max-width: 100rem;
+    margin: 0 auto;
+    background: #FFE5EA url(../images/heart.svg) no-repeat center 8rem;
+    background-size: 15.6rem 13.9rem;
+    border-radius: 16px;
+    padding: 26rem 10rem 12rem;
+    position: relative;
+    font-size: 2.2rem;
+    text-align: center;
+    min-height: 60rem;
+
+    .connect-me {
+      position: absolute;
+
+      &--main {
+        width: 72rem;
+        left: 50%;
+        bottom: -6rem;
+        margin-left: -36rem;
+        font-size: 4.5rem;
+        padding: 3rem;
+        border-radius: 26px;
+      }
+
+      &--1 {
+        left: -20rem;
+        bottom: 10rem;
+        zoom: 0.9;
+      }
+
+      &--2 {
+        left: 20rem;
+        bottom: 72rem;
+        zoom: 0.5;
+      }
+
+      &--3 {
+        left: -12rem;
+        top: 4rem;
+        zoom: 1.5;
+      }
+
+      &--4 {
+        right: 16rem;
+        top: -3rem;
+        zoom: 0.6;
+      }
+
+      &--5 {
+        right: -16rem;
+        top: 13rem;
+        zoom: 1.2;
+      }
+
+      &--6 {
+        right: -24rem;
+        bottom: 30rem;
+        zoom: 0.7;
+      }
+    }
+  }
+
+
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    line-height: 1.3;
+  }
 }
