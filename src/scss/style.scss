@@ -275,6 +275,52 @@ body {
 
   &__language {
     margin-right: 4.5rem;
+    position: relative;
+    border: 1px solid #D5D5D5;
+    border-radius: 4px;
+
+    @include mobile {
+      display: block;
+      width: 100px;
+      margin-right: 0;
+      margin-bottom: 7rem;
+      margin-top: 4rem;
+    }
+    
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 27px;
+      background: #fff url(../images/lang.svg) no-repeat center center;
+      pointer-events: none;
+    }
+
+    select {
+      width: 100%;
+      height: 4.9rem;
+      -webkit-appearance: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: #000;
+      font-size: 16px;
+      outline: none;
+      padding-left: 1rem;
+      padding-right: 2.8rem;
+
+      @include mobile {
+        color: #fff;
+        font-size: 1.9rem;
+      }
+
+      option {
+        color: #000;
+      }
+    }
   }
 
   &__mobile-menu {
