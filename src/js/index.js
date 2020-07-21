@@ -1,3 +1,7 @@
+import Swiper, { Navigation, Pagination } from 'swiper';
+
+Swiper.use([Navigation, Pagination]);
+
 console.log('it works');
 
 const _body = document.body;
@@ -11,3 +15,19 @@ toggle.addEventListener('click', () => {
 toggleClose.addEventListener('click', () => {
   _body.toggleAttribute('data-menu');
 });
+
+var mySwiper = new Swiper('.reviews-slider', {
+  loop: true,
+  slidesPerView: 1,
+
+  pagination: {
+    el: '.reviews-slider__pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '.reviews-slider__next',
+    prevEl: '.reviews-slider__prev',
+  },
+
+})

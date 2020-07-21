@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+@import '~swiper/swiper-bundle.css';
 
 
 //@import "~bootstrap/scss/bootstrap";
@@ -54,7 +55,7 @@ body {
   z-index: 1;
 
   @include mobile {
-    padding: 10rem 2rem 2rem;
+    padding: 10rem 2rem 3rem;
   }
 
   &__container {
@@ -369,6 +370,7 @@ body {
 .hero {
   text-align: center;
   margin-bottom: 6rem;
+  padding: 0 2rem;
 
   img {
     display: block;
@@ -392,20 +394,32 @@ body {
   margin: 0 auto 10rem;
   padding: 0 2rem;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   &__item {
     //border: solid 1px blue;
     width: 50%;
     text-align: center;
     padding: 5rem 5rem 6rem;
 
+    @include mobile {
+      width: 100%;
+    }
+
     &--1 {
       background: #FFDFDE;
       border-radius: 30px 0px 0px 0px;
+      
+      @include mobile { border-radius: 0; }
     }
 
     &--2 {
       background: #FEFFCB;
       border-radius: 0 30px 0px 0px;
+
+      @include mobile { border-radius: 0; }
     }
 
     &--3 {
@@ -419,11 +433,15 @@ body {
     &--5 {
       background: #EDFFC8;
       border-radius: 0px 0px 0px 30px;
+
+      @include mobile { border-radius: 0; }
     }
 
     &--6 {
       background: #FFE5F6;
       border-radius: 0px 0px 30px 0px;
+
+      @include mobile { border-radius: 0; }
     }
   }
 
@@ -471,7 +489,8 @@ body {
 }
 
 .connect {
-  padding: 0 2rem 15rem;
+  padding: 2rem 2rem 15rem;
+  overflow: hidden;
 
   &__content {
     max-width: 100rem;
@@ -485,6 +504,18 @@ body {
     text-align: center;
     min-height: 60rem;
 
+    @include mobile {
+      background: #FFE5EA;
+      padding: 3rem;
+      min-height: 1rem;
+      font-size: 1.6rem;
+
+      h2 {
+        font-size: 2.4rem;
+        margin-top: 0;
+      }
+    }
+
     .connect-me {
       position: absolute;
 
@@ -496,42 +527,78 @@ body {
         font-size: 4.5rem;
         padding: 3rem;
         border-radius: 26px;
+
+        @include mobile {
+          position: relative;
+          display: block;
+          bottom: auto;
+          left: auto;
+          margin: 4rem auto 0;
+          width: 100%;
+          font-size: 1.8rem;
+          padding: 2rem;
+          border-radius: 1rem;
+        }
       }
 
       &--1 {
         left: -20rem;
         bottom: 10rem;
         zoom: 0.9;
+
+        @include mobile {
+          display: none;
+        }
       }
 
       &--2 {
         left: 20rem;
         bottom: 72rem;
         zoom: 0.5;
+
+        @include mobile {
+          display: none;
+        }
       }
 
       &--3 {
         left: -12rem;
         top: 4rem;
         zoom: 1.5;
+
+        @include mobile {
+          display: none;
+        }
       }
 
       &--4 {
         right: 16rem;
         top: -3rem;
         zoom: 0.6;
+
+        @include mobile {
+          display: none;
+        }
       }
 
       &--5 {
         right: -16rem;
         top: 13rem;
         zoom: 1.2;
+
+        @include mobile {
+          display: none;
+        }
       }
 
       &--6 {
         right: -24rem;
         bottom: 30rem;
         zoom: 0.7;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
   }
@@ -543,3 +610,107 @@ body {
     line-height: 1.3;
   }
 }
+
+.clients {
+  text-align: center;
+  padding: 0 2rem;
+  margin-bottom: 14rem;
+
+  @include mobile {
+    margin-bottom: 5rem;
+  }
+
+  .clients-filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      cursor: pointer;
+      margin: 0 1rem 1rem;
+      border-bottom: solid 2px transparent;
+
+      &.selected {
+        font-weight: bold;
+        border-bottom: solid 2px #000;
+      }
+    }
+  }
+
+  .clients-list {
+    max-width: 110rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      width: 25%;
+      margin-bottom: 2rem;
+
+      @include mobile {
+        width: 50%;
+      }
+    }
+
+    &__image {
+      margin: 0 auto;
+      padding: 1.6rem;
+      height: 13rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}
+
+.reviews {
+  text-align: center;
+  padding: 0 2rem;
+
+  h2 {
+    font-size: 3.2rem;
+    font-weight: 900;
+  }
+
+  &__holder {
+    position: relative;
+    max-width: 120rem;
+    margin: 0 auto;
+    border: solid 1px green;
+  }
+
+  .reviews-slider {
+    border: 1px solid red;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 0 4rem;
+
+    &__wrapper {
+      
+    }
+
+    &__slide {
+      border: 1px solid blue;
+    }
+
+    &__pagination {
+      bottom: 0;
+    }
+
+    &__prev {
+      left: 0;
+    }
+  }
+}
+
