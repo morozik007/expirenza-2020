@@ -37,18 +37,45 @@ const accordionTitle = document.getElementsByClassName('c-accordion__title');
 var i;
 
 for (i = 0; i < accordionTitle.length; i++) {
-    accordionTitle[i].addEventListener('click', toggleItem, false);
+  accordionTitle[i].addEventListener('click', toggleItem, false);
 }
 function toggleItem() {
-    var itemClass = this.parentNode;
-    
-    if (itemClass.classList.contains('c-accordion__item--is-open')) {
-        elementClass(itemClass).remove('c-accordion__item--is-open');
+  var itemClass = this.parentNode;
+  
+  if (itemClass.classList.contains('c-accordion__item--is-open')) {
+    elementClass(itemClass).remove('c-accordion__item--is-open');
+  }
+  else {
+    for (i = 0; i < accordionItem.length; i++) {
+      elementClass(accordionItem[i]).remove('c-accordion__item--is-open');
     }
-    else {
-        for (i = 0; i < accordionItem.length; i++) {
-            elementClass(accordionItem[i]).remove('c-accordion__item--is-open');
-        }
-        elementClass(itemClass).add('c-accordion__item--is-open');
-    }
+    elementClass(itemClass).add('c-accordion__item--is-open');
+  }
 }
+
+const filters = [].slice.call(document.querySelectorAll('.price__filter'));
+const prices = [].slice.call(document.querySelectorAll('.pricelist__item'));
+
+filters.forEach(filter => {
+  filter.addEventListener('click', (e) => {
+    e.preventDefault();
+    const filterValue = filter.dataset.tab;
+
+    console.log(filterValue);
+    
+    [].forEach.call(filters, (el) => {
+      el.classList.remove('selected');
+    });
+
+    [].forEach.call(prices, (el) => {
+      el.classList.remove('selected');
+      el.style.display="none";
+    });
+    
+    filter.classList.add('selected');
+
+    const priceItem = document.getElementById(filterValue);
+    priceItem.classList.add('selected');
+          
+  });
+});
