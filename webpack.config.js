@@ -94,10 +94,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "./css/style.bundle.css"
     }),
-    new CopyWebpackPlugin([{
-        from: './src/fonts',
-        to: './fonts'
-      },
+    new CopyWebpackPlugin([
       {
         from: './src/images',
         to: './images'

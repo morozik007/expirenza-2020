@@ -1399,8 +1399,11 @@ body {
 
   &__filters {
     display: none;
-    margin: 0;
+    margin: 0 0 2rem;
     padding: 0;
+    background: #F2F2F2;
+    border: 1px solid #ECECEC;
+    border-radius: 6px;
 
     @include mobile {
       display: flex;
@@ -1413,10 +1416,13 @@ body {
       display: block;
       width: 33.33333%;
       text-align: center;
-      border: solid 1px red;
+      padding: 1rem;
+      font-weight: 600;
 
       &.selected {
-        color: red;
+        background: #FBFBFB;
+        box-shadow: 0px 6px 12px rgba(4, 8, 50, 0.3);
+        border-radius: 6px;
       }
     }
   }
@@ -1476,7 +1482,7 @@ body {
     }
 
     ul {
-      margin: 0 0 15rem;
+      margin: 0 0 10rem;
       padding: 0;
       list-style: none;
 
@@ -1544,6 +1550,10 @@ body {
     padding-right: 4rem;
     font-style: italic;
     font-size: 1.2rem;
+
+    @include mobile {
+      bottom: 7rem;
+    }
   }
 }
 
