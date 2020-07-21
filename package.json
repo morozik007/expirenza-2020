@@ -13,6 +13,7 @@
     "clear": "del-cli dist"
   },
   "dependencies": {
+    "element-class": "^0.2.2",
     "swiper": "^6.0.4"
   },
   "devDependencies": {

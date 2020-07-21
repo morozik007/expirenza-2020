@@ -1,4 +1,5 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
+import elementClass from 'element-class';
 
 Swiper.use([Navigation, Pagination]);
 
@@ -29,5 +30,25 @@ var mySwiper = new Swiper('.reviews-slider', {
     nextEl: '.reviews-slider__next',
     prevEl: '.reviews-slider__prev',
   },
+});
 
-})
+const accordionItem = document.getElementsByClassName('c-accordion__item');
+const accordionTitle = document.getElementsByClassName('c-accordion__title');
+var i;
+
+for (i = 0; i < accordionTitle.length; i++) {
+    accordionTitle[i].addEventListener('click', toggleItem, false);
+}
+function toggleItem() {
+    var itemClass = this.parentNode;
+    
+    if (itemClass.classList.contains('c-accordion__item--is-open')) {
+        elementClass(itemClass).remove('c-accordion__item--is-open');
+    }
+    else {
+        for (i = 0; i < accordionItem.length; i++) {
+            elementClass(accordionItem[i]).remove('c-accordion__item--is-open');
+        }
+        elementClass(itemClass).add('c-accordion__item--is-open');
+    }
+}

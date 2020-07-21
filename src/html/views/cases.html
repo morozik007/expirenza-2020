@@ -4,8 +4,100 @@
 
 <%= _.template(require('./../includes/header.html'))(data) %>
 
-<h1>Cases</h1>
+<section class="cases">
+  <div class="cases__list">
+    <div class="cases__item cases__item--headline">
+      <figure class="cases__image">
+        <img src="images/pizza.png" alt="">
+      </figure>
+      <div class="cases__content">
+        <h2>MIMOZA BROOKLYN PIZZA</h2>
+      </div>
+      <div class="cases__show">
+        <a href="case.html" class="more">Посмотреть кейс →</a>
+      </div>
+    </div>
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="cases__item">
+      <figure class="cases__image">
+        <img src="images/pizza.png" alt="">
+      </figure>
+      <div class="cases__content">
+        <h2>КиТАЙСКИЙ ПРИВЕТ</h2>
+      </div>
+      <div class="cases__show">
+        <a href="case.html" class="more">Посмотреть кейс →</a>
+      </div>
+    </div>
+
+    <div class="cases__item">
+      <figure class="cases__image">
+        <img src="images/pizza.png" alt="">
+      </figure>
+      <div class="cases__content">
+        <h2>БЕССАРАБСКИЙ РЫНОК</h2>
+      </div>
+      <div class="cases__show">
+        <a href="case.html" class="more">Посмотреть кейс →</a>
+      </div>
+    </div>
+
+    <div class="cases__item">
+      <figure class="cases__image">
+        <img src="images/pizza.png" alt="">
+      </figure>
+      <div class="cases__content">
+        <h2>Кураж</h2>
+      </div>
+      <div class="cases__show">
+        <a href="case.html" class="more">Посмотреть кейс →</a>
+      </div>
+    </div>
+
+    <div class="cases__item">
+      <figure class="cases__image">
+        <img src="images/pizza.png" alt="">
+      </figure>
+      <div class="cases__content">
+        <h2>БЕССАРАБСКИЙ РЫНОК</h2>
+      </div>
+      <div class="cases__show">
+        <a href="case.html" class="more">Посмотреть кейс →</a>
+      </div>
+    </div>
+
+    <div class="cases__item">
+      <figure class="cases__image">
+        <img src="images/pizza.png" alt="">
+      </figure>
+      <div class="cases__content">
+        <h2>Медиком</h2>
+      </div>
+      <div class="cases__show">
+        <a href="case.html" class="more">Посмотреть кейс →</a>
+      </div>
+    </div>
+
+    <div class="cases__item">
+      <figure class="cases__image">
+        <img src="images/pizza.png" alt="">
+      </figure>
+      <div class="cases__content">
+        <h2>БЕТОН ОТ КОВАЛЬСКОЙ</h2>
+      </div>
+      <div class="cases__show">
+        <a href="case.html" class="more">Посмотреть кейс →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%= _.template(require('./../includes/clients.html'))(data) %>
+
+<%= _.template(require('./../includes/connect.html'))(data) %>
+
+<%= _.template(require('./../includes/call.html'))(data) %>
+
 
 <%= _.template(require('./../includes/footer.html'))(data) %>

@@ -1,0 +1,97 @@
+<% var data = {
+  title: "Expirenza",
+}; %>
+
+<%= _.template(require('./../includes/header.html'))(data) %>
+
+<section class="case-description">
+  <div class="case-description__container">
+    <p>
+      <img src="images/case-logo.png" alt="">
+    </p>
+    мостик к сердцу и глазам вашего гостя, который помогает быстро реагировать на впечатления клиентов, до того, как они захотят написать плохой отзыв в социальных сетях или вовсе решат не возвращаться
+  </div>
+</section>
+
+<section class="media">
+  <div class="media__container">
+    <div class="videoWrapper">
+      <iframe width="560" height="349" src="http://www.youtube.com/embed/0oYxT0awxvQ?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <div class="quote__container">
+    <div class="quote__userpic">
+      <img src="images/userpic.png" alt="" width="80" height="80">
+    </div>
+    <div class="quote__text">«Это все работает, ребята, у меняконверсия 200%, инстаграм взорвался, пицца вкусная, люди пишут нам»</div>
+    <div class="quote__owner">Игорь Сухомлин, владелец</div>
+  </div>
+</section>
+
+<section class="numbers">
+  <div class="numbers__container">
+    <h2>Результат Игоря в цифрах:</h2>
+
+    <div class="numbers__list">
+      <div class="numbers__item">
+        <h3>456</h3>
+        новых клиентов ежедневно узнают о продукте Игоря из рекомендаций
+      </div>
+      <div class="numbers__item">
+        <h3>40%</h3>
+        людей вернулись в заведение, даже если им не понравилось, но захотелось попробовать еще
+      </div>
+      <div class="numbers__item">
+        <h3>+120</h3>
+        партнеров захотели кормить своих сотрудников продукцией Игоря, благодаря системе рекомендаций
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="reviews">
+
+  <div class="reviews__holder">
+    <!-- Slider main container -->
+    <div class="swiper-container reviews-slider">
+      <div class="swiper-wrapper reviews-slider__wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide reviews-slider__slide">
+            <img src="images/pizza.png" alt="">
+        </div>
+        <div class="swiper-slide reviews-slider__slide">
+            <img src="images/pizza.png" alt="">
+        </div>
+        <div class="swiper-slide reviews-slider__slide">
+            <img src="images/pizza.png" alt="">
+        </div>
+        <div class="swiper-slide reviews-slider__slide">
+            <img src="images/pizza.png" alt="">
+        </div>
+        
+      </div>
+      <div class="swiper-pagination reviews-slider__pagination"></div>
+
+      
+    </div>
+    <div class="swiper-button-prev reviews-slider__prev"></div>
+    <div class="swiper-button-next reviews-slider__next"></div>
+
+  </div>
+
+</section>
+
+
+<%= _.template(require('./../includes/clients.html'))(data) %>
+
+<%= _.template(require('./../includes/connect.html'))(data) %>
+
+<%= _.template(require('./../includes/call.html'))(data) %>
+
+
+<%= _.template(require('./../includes/footer.html'))(data) %>
+
