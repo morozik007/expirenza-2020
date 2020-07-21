@@ -17,7 +17,7 @@ toggleClose.addEventListener('click', () => {
 });
 
 var mySwiper = new Swiper('.reviews-slider', {
-  loop: true,
+  //loop: true,
   slidesPerView: 1,
 
   pagination: {
