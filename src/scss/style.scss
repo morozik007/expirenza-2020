@@ -19,7 +19,7 @@ button, input {
 }
 
 html {
-  font-size: 10px;
+  font-size: 8px;
 }
 
 figure {
@@ -69,6 +69,7 @@ body {
 
   @include mobile {
     padding: 10rem 2rem 3rem;
+    font-size: 1.4rem;
   }
 
   &__container {
@@ -158,6 +159,11 @@ body {
       background-repeat:none;
       background-size: cover;
 
+      @include mobile {
+        width: 3rem;
+        height: 3rem;
+      }
+
       &.facebook {
         background-image: url(../images/fb.svg);
       }
@@ -169,6 +175,10 @@ body {
       &.youtube {
         background-image: url(../images/youtube.svg);
         width: 6.6rem;
+
+        @include mobile {
+          width: 4.5rem;
+        }
       }
 
       &.instagram {
@@ -274,7 +284,7 @@ body {
       margin-right: 4.5rem;
 
       @include mobile {
-        font-size: 4rem;
+        font-size: 3rem;
         color: #fff;
         margin: 0 0 1rem;
         display: block;
@@ -331,10 +341,10 @@ body {
       border: none;
       cursor: pointer;
       color: #000;
-      font-size: 16px;
+      font-size: 1.6rem;
       outline: none;
       padding-left: 1rem;
-      padding-right: 2.8rem;
+      padding-right: 3.8rem;
 
       @include mobile {
         color: #fff;
@@ -389,10 +399,19 @@ body {
   margin-bottom: 6rem;
   padding: 0 2rem;
 
+  @include mobile {
+    margin-bottom: 3rem;
+  }
+
   img {
     display: block;
     margin: auto;
-    max-width: 100%;
+    max-width: 60%;
+
+    @include mobile {
+      height: auto;
+      max-width: 80%;
+    }
   }
 
   &__text {
@@ -400,6 +419,10 @@ body {
     max-width: 80rem;
     margin: 0 auto;
     font-size: 2.2rem;
+
+    @include mobile {
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -414,6 +437,7 @@ body {
   @include mobile {
     flex-direction: column;
     padding: 0;
+    margin-bottom: 5rem;
   }
 
   &__item {
@@ -424,6 +448,7 @@ body {
 
     @include mobile {
       width: 100%;
+      padding: 2rem 3rem 3rem;
     }
 
     &--1 {
@@ -484,11 +509,19 @@ body {
     justify-content: center;
     align-items: center;
 
+    @include mobile {
+      height: auto;
+    }
+
     img {
       //width: 100%;
       height: 100%;
       max-width: 100%;
       object-fit: contain;
+
+      @include mobile {
+        height: auto;
+      }
       //border: solid 1px green;
     }
   }
@@ -507,7 +540,8 @@ body {
 }
 
 .connect {
-  padding: 2rem 2rem 20rem;
+  padding: 2rem 2rem 14rem;
+  margin-bottom: 10rem;
   overflow: hidden;
 
   @include mobile {
@@ -528,7 +562,7 @@ body {
 
     @include mobile {
       background: #FFE5EA;
-      padding: 3rem;
+      padding: 2rem;
       min-height: 1rem;
       font-size: 1.6rem;
 
@@ -630,6 +664,10 @@ body {
     font-size: 3.2rem;
     font-weight: 900;
     line-height: 1.3;
+
+    @include mobile {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -708,6 +746,11 @@ body {
   h2 {
     font-size: 3.2rem;
     font-weight: 900;
+
+    @include mobile {
+      font-size: 2.4rem;
+      line-height: 1.3;
+    }
   }
 
   &__holder {
@@ -760,7 +803,7 @@ body {
       padding: 5rem 7rem;
 
       @include mobile {
-        padding: 4rem;
+        padding: 2rem;
       }
     }
 
@@ -804,6 +847,11 @@ body {
       overflow: hidden;
       border-radius: 100%;
       margin-bottom: 2rem;
+
+      @include mobile {
+        width: 8rem;
+        height: 8rem;
+      }
     }
 
     &__text {
@@ -812,7 +860,7 @@ body {
       line-height: 1.3;
 
       @include mobile {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
     }
 
@@ -877,6 +925,7 @@ body {
 
   @include mobile {
     margin-bottom: 8rem;
+    font-size: 1.6rem;
   }
 
   h2 {
@@ -884,6 +933,11 @@ body {
     line-height: 1.3;
     font-weight: 900;
     margin: 0;
+
+    @include mobile {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
   }
 
   p {
@@ -918,6 +972,7 @@ body {
       @include mobile {
         margin: 0 0 2rem;
         padding: 1rem;
+        font-size: 3rem;
       }
 
       &::placeholder {
@@ -942,6 +997,7 @@ body {
 
       @include mobile {
         width: 100%;
+        height: 6rem;
       }
     }
   }
@@ -1113,6 +1169,10 @@ body {
       font-size: 3.2rem;
       line-height: 1.3;
       margin-bottom: 5rem;
+
+      @include mobile {
+        font-size: 2.4rem;
+      }
     }
   }
 
@@ -1222,7 +1282,7 @@ body {
   margin-bottom: 5rem;
 
   @include mobile {
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     text-align: center;
     font-size: 1.6rem;
   }
@@ -1250,6 +1310,7 @@ body {
 
     @include mobile {
       width: 90%;
+      padding: 0;
     }
   }
 
@@ -1312,6 +1373,12 @@ body {
       padding: 0 !important;
       order: 2 !important;
     }
+
+    h2 {
+      @include mobile {
+        font-size: 1.8rem;
+      }
+    }
   }
 
 }
@@ -1344,6 +1411,7 @@ body {
       background-image: url(../images/plus.svg);
       background-position: center center;
       background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
@@ -1380,11 +1448,25 @@ body {
   padding: 0 2rem;
   margin-bottom: 10rem;
 
+  @include mobile {
+    margin-bottom: 4rem;
+  }
+
+  h2 {
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+
   &__container {
     max-width: 80rem;
     margin: 0 auto;
     text-align: center;
     font-size: 2rem;
+
+    @include mobile {
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -1486,13 +1568,30 @@ body {
       padding: 0;
       list-style: none;
 
+      @include mobile {
+        margin-bottom: 15rem;
+      }
+
       li {
         line-height: 1.3;
         margin-bottom: 2rem;
+        padding-bottom: 5px;
         font-weight: 500;
 
+        @include mobile {
+          background-image: url(../images/check.svg);
+          background-position: right top;
+          background-repeat: no-repeat;
+          padding-right: 5rem;
+        }
+
         &.unavailable {
-          opacity: 0.3;
+          //opacity: 0.3;
+          color: #a6a6a6;
+
+          @include mobile {
+            background-image: url(../images/check-pro.svg);
+          }
         }
       }
     }
