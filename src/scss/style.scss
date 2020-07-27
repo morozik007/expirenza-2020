@@ -19,7 +19,7 @@ button, input {
 }
 
 html {
-  font-size: 8px;
+  font-size: 9px;
 }
 
 figure {
@@ -54,10 +54,6 @@ body {
   }
 }
 
-.container {
-
-}
-
 .footer {
   background: #252525;
   padding: 20rem 2rem;
@@ -68,7 +64,7 @@ body {
   z-index: 1;
 
   @include mobile {
-    padding: 10rem 2rem 3rem;
+    padding: 10rem 2rem 5rem;
     font-size: 1.4rem;
   }
 
@@ -406,11 +402,11 @@ body {
   img {
     display: block;
     margin: auto;
-    max-width: 60%;
+    max-width: 57rem;
 
     @include mobile {
       height: auto;
-      max-width: 80%;
+      max-width: 40rem;
     }
   }
 
@@ -545,7 +541,8 @@ body {
   overflow: hidden;
 
   @include mobile {
-    padding-bottom: 10rem;
+    padding-bottom: 5rem;
+    margin-bottom: 5rem;
   }
 
   &__content {
@@ -925,7 +922,7 @@ body {
 
   @include mobile {
     margin-bottom: 8rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   h2 {
@@ -935,7 +932,7 @@ body {
     margin: 0;
 
     @include mobile {
-      font-size: 2rem;
+      font-size: 2.4rem;
       margin-bottom: 1rem;
     }
   }
@@ -947,6 +944,11 @@ body {
   &__userpic {
     padding: 0;
     margin: 0 0 2rem;
+
+    @include mobile {
+      width: 13rem;
+      margin: 0 auto 2rem;
+    }
   }
 
   &__form {
@@ -970,9 +972,12 @@ body {
       flex: 1;
 
       @include mobile {
+        display:block;
         margin: 0 0 2rem;
         padding: 1rem;
         font-size: 3rem;
+        height: 50px;
+        flex: auto;
       }
 
       &::placeholder {
@@ -997,7 +1002,8 @@ body {
 
       @include mobile {
         width: 100%;
-        height: 6rem;
+        height: 50px;
+        background-size: 4rem;
       }
     }
   }
