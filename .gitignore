@@ -123,7 +123,7 @@ $RECYCLE.BIN/
 
 ### grunt ###
 # Grunt usually compiles files inside this directory
-dist/
+# dist/
 
 # Grunt usually preprocesses files such as coffeescript, compass... inside the .tmp directory
 .tmp/
@@ -151,8 +151,8 @@ sftp-config.json
 .settings/
 .vscode/
 /src/.DS_Store
-/dist/css/style.bundle.css
-/dist/css/style.bundle.css.map
-/dist/js/bundle.js
-/dist/index.html
-/dist/js/bundle.js.map
+# /dist/css/style.bundle.css
+# /dist/css/style.bundle.css.map
+# /dist/js/bundle.js
+# /dist/index.html
+# /dist/js/bundle.js.map
